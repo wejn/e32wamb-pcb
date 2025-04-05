@@ -8,6 +8,8 @@
 		(title "e32wamb pcb")
 		(date "2025-04-05")
 		(company "wejn.org")
+		(comment 1 "Licensed under CC BY-SA 4.0")
+		(comment 2 "Open Source Hardware")
 	)
 	(lib_symbols
 		(symbol "Connector_Generic:Conn_01x03"
@@ -4987,7 +4989,7 @@
 				)
 			)
 		)
-		(property "Value" "0"
+		(property "Value" "0Ω"
 			(at 213.36 96.52 90)
 			(effects
 				(font
@@ -5065,7 +5067,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10k"
+		(property "Value" "10kΩ"
 			(at 35.56 144.7799 0)
 			(effects
 				(font
@@ -5730,7 +5732,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "390"
+		(property "Value" "390Ω"
 			(at 74.93 96.5199 0)
 			(effects
 				(font
@@ -6073,7 +6075,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10k"
+		(property "Value" "10kΩ"
 			(at 35.56 105.4099 0)
 			(effects
 				(font
@@ -6152,7 +6154,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10k"
+		(property "Value" "10kΩ"
 			(at 74.93 144.7799 0)
 			(effects
 				(font
@@ -6942,7 +6944,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10K"
+		(property "Value" "10kΩ"
 			(at 264.16 97.7899 0)
 			(effects
 				(font
@@ -7377,7 +7379,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10k"
+		(property "Value" "10kΩ"
 			(at 36.83 185.4199 0)
 			(effects
 				(font
@@ -7522,7 +7524,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "390"
+		(property "Value" "390Ω"
 			(at 36.83 175.2599 0)
 			(effects
 				(font
@@ -7798,7 +7800,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "390"
+		(property "Value" "390Ω"
 			(at 35.56 95.2499 0)
 			(effects
 				(font
@@ -7966,7 +7968,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "390"
+		(property "Value" "390Ω"
 			(at 74.93 134.6199 0)
 			(effects
 				(font
@@ -8045,7 +8047,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "390"
+		(property "Value" "390Ω"
 			(at 35.56 134.6199 0)
 			(effects
 				(font
@@ -8611,7 +8613,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10k"
+		(property "Value" "10kΩ"
 			(at 74.93 106.6799 0)
 			(effects
 				(font
