@@ -4,7 +4,7 @@ The things under `datasheets/` are copyrighted by their respective © holders, I
 
 The kicad project under `project/` subdirectory is covered by the
 [Creative Commons Attribution-ShareAlike 4.0 International](#creative-commons-attribution-sharealike-40-international),
-but some of the subdirectories under `project/` again come from different places (Seed Studio, Wago, ...),
+but some of the subdirectories under `project/` again come from different places (Seeed Studio, Wago, ...),
 and in that case I make no explicit claim over them.
 
 ## Creative Commons Attribution-ShareAlike 4.0 International
