@@ -3,4 +3,5 @@
   (lib (name "xiao")(type "KiCad")(uri "${KIPRJMOD}/xiao/Seeed_Studio_XIAO_Series.kicad_sym")(options "")(descr ""))
   (lib (name "wago")(type "KiCad")(uri "${KIPRJMOD}/wago-connector/2060-452_998-404.kicad_sym")(options "")(descr ""))
   (lib (name "misc-lib")(type "KiCad")(uri "${KIPRJMOD}/misc-lib.kicad_sym")(options "")(descr ""))
+  (lib (name "wago2059")(type "KiCad")(uri "${KIPRJMOD}/wago-connector/2059-302_998-403.kicad_sym")(options "")(descr ""))
 )
