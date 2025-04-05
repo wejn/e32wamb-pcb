@@ -1,0 +1,5 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "xiao")(type "KiCad")(uri "${KIPRJMOD}/xiao")(options "")(descr ""))
+  (lib (name "wago-connector")(type "KiCad")(uri "${KIPRJMOD}/wago-connector")(options "")(descr ""))
+)

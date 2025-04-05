@@ -1,0 +1,7 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "xiao")(type "KiCad")(uri "${KIPRJMOD}/xiao/Seeed_Studio_XIAO_Series.kicad_sym")(options "")(descr ""))
+  (lib (name "wago")(type "KiCad")(uri "${KIPRJMOD}/wago-connector/2060-452_998-404.kicad_sym")(options "")(descr ""))
+  (lib (name "misc-lib")(type "KiCad")(uri "${KIPRJMOD}/misc-lib.kicad_sym")(options "")(descr ""))
+  (lib (name "New_Library")(type "KiCad")(uri "${KIPRJMOD}/New_Library.kicad_sym")(options "")(descr ""))
+)
