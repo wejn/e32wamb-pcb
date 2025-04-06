@@ -6,7 +6,8 @@
 	(paper "A4")
 	(title_block
 		(title "e32wamb pcb")
-		(date "2025-04-05")
+		(date "2025-04-06")
+		(rev "2")
 		(company "wejn.org")
 		(comment 1 "Licensed under CC BY-SA 4.0")
 		(comment 2 "Open Source Hardware")
@@ -1170,18 +1171,19 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Simulation_SPICE:NMOS"
+		(symbol "Switch:SW_Push"
 			(pin_numbers
 				(hide yes)
 			)
 			(pin_names
-				(offset 0)
+				(offset 1.016)
+				(hide yes)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "Q"
-				(at 5.08 1.27 0)
+			(property "Reference" "SW"
+				(at 1.27 2.54 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1189,8 +1191,155 @@
 					(justify left)
 				)
 			)
-			(property "Value" "NMOS"
-				(at 5.08 -1.27 0)
+			(property "Value" "SW_Push"
+				(at 0 -1.524 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Push button switch, generic, two pins"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "switch normally-open pushbutton push-button"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "SW_Push_0_1"
+				(circle
+					(center -2.032 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 1.27) (xy 0 3.048)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.032 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 1.27) (xy -2.54 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Transistor_FET:Q_NMOS_GSD"
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "Q"
+				(at 5.08 1.905 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "Q_NMOS_GSD"
+				(at 5.08 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1207,16 +1356,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#cha_MOSFETs"
-				(at 0 -12.7 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "N-MOSFET transistor, drain/source/gate"
+			(property "Datasheet" "~"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1225,34 +1365,7 @@
 					(hide yes)
 				)
 			)
-			(property "Sim.Device" "NMOS"
-				(at 0 -17.145 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Sim.Type" "VDMOS"
-				(at 0 -19.05 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Sim.Pins" "1=D 2=G 3=S"
-				(at 0 -15.24 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "transistor NMOS N-MOS N-MOSFET simulation"
+			(property "Description" "N-MOSFET transistor, gate/source/drain"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1261,7 +1374,16 @@
 					(hide yes)
 				)
 			)
-			(symbol "NMOS_0_1"
+			(property "ki_keywords" "transistor NMOS N-MOS N-MOSFET"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Q_NMOS_GSD_0_1"
 				(polyline
 					(pts
 						(xy 0.254 1.905) (xy 0.254 -1.905)
@@ -1405,7 +1527,7 @@
 				)
 				(polyline
 					(pts
-						(xy 2.794 0.508) (xy 2.921 0.381) (xy 3.683 0.381) (xy 3.81 0.254)
+						(xy 2.921 0.381) (xy 3.683 0.381)
 					)
 					(stroke
 						(width 0)
@@ -1428,7 +1550,7 @@
 					)
 				)
 			)
-			(symbol "NMOS_1_1"
+			(symbol "Q_NMOS_GSD_1_1"
 				(pin input line
 					(at -5.08 0 0)
 					(length 2.54)
@@ -1439,7 +1561,7 @@
 							)
 						)
 					)
-					(number "2"
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1457,7 +1579,7 @@
 							)
 						)
 					)
-					(number "1"
+					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1469,156 +1591,6 @@
 					(at 2.54 -5.08 90)
 					(length 2.54)
 					(name "S"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Switch:SW_Push"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 1.016)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "SW"
-				(at 1.27 2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "SW_Push"
-				(at 0 -1.524 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 5.08 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 5.08 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Push button switch, generic, two pins"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "switch normally-open pushbutton push-button"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "SW_Push_0_1"
-				(circle
-					(center -2.032 0)
-					(radius 0.508)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 1.27) (xy 0 3.048)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 2.032 0)
-					(radius 0.508)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 1.27) (xy -2.54 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at -5.08 0 0)
-					(length 2.54)
-					(name "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 5.08 0 180)
-					(length 2.54)
-					(name "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2287,7 +2259,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "wago:2060-452_998-404"
+		(symbol "wago2059:2059-302_998-403"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -2300,7 +2272,7 @@
 					(justify left top)
 				)
 			)
-			(property "Value" "2060-452_998-404"
+			(property "Value" "2059-302_998-403"
 				(at 21.59 5.08 0)
 				(effects
 					(font
@@ -2309,7 +2281,7 @@
 					(justify left top)
 				)
 			)
-			(property "Footprint" "2060452998404"
+			(property "Footprint" "2059302998403"
 				(at 21.59 -94.92 0)
 				(effects
 					(font
@@ -2319,7 +2291,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "https://www.wago.com/2060-452/998-404"
+			(property "Datasheet" "https://www.wago.com/2059-302/998-403"
 				(at 21.59 -194.92 0)
 				(effects
 					(font
@@ -2329,7 +2301,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "SMD PCB terminal block; push-button; 0.75 mm; Pin spacing 4 mm; 2-pole; Push-in CAGE CLAMP; in tape-and-reel packaging"
+			(property "Description" "SMD PCB terminal block; 0.5 mm; Pin spacing 3 mm; 2-pole; PUSH WIRE; in tape-and-reel packaging"
 				(at 0 0 0)
 				(effects
 					(font
@@ -2338,7 +2310,7 @@
 					(hide yes)
 				)
 			)
-			(property "Height" "4.5"
+			(property "Height" ""
 				(at 21.59 -394.92 0)
 				(effects
 					(font
@@ -2358,7 +2330,7 @@
 					(hide yes)
 				)
 			)
-			(property "Manufacturer_Part_Number" "2060-452/998-404"
+			(property "Manufacturer_Part_Number" "2059-302/998-403"
 				(at 21.59 -594.92 0)
 				(effects
 					(font
@@ -2388,7 +2360,7 @@
 					(hide yes)
 				)
 			)
-			(property "Arrow Part Number" "2060-452/998-404"
+			(property "Arrow Part Number" "2059-302/998-403"
 				(at 21.59 -894.92 0)
 				(effects
 					(font
@@ -2398,7 +2370,7 @@
 					(hide yes)
 				)
 			)
-			(property "Arrow Price/Stock" "https://www.arrow.com/en/products/2060-452998-404/wago-kontakttechnik-gmbh?utm_currency=USD&region=europe"
+			(property "Arrow Price/Stock" "https://www.arrow.com/en/products/2059-302998-403/wago-kontakttechnik-gmbh?utm_currency=USD&region=europe"
 				(at 21.59 -994.92 0)
 				(effects
 					(font
@@ -2408,7 +2380,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "2060-452_998-404_1_1"
+			(symbol "2059-302_998-403_1_1"
 				(rectangle
 					(start 5.08 2.54)
 					(end 20.32 -5.08)
@@ -3269,16 +3241,6 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 102.87) (xy 144.78 93.98)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0e7d86d5-9c43-4546-be90-694cd9d94ba0")
-	)
-	(wire
-		(pts
 			(xy 226.06 107.95) (xy 226.06 109.22)
 		)
 		(stroke
@@ -3309,7 +3271,7 @@
 	)
 	(wire
 		(pts
-			(xy 119.38 105.41) (xy 119.38 109.22)
+			(xy 119.38 100.33) (xy 119.38 109.22)
 		)
 		(stroke
 			(width 0)
@@ -3379,7 +3341,7 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 109.22) (xy 144.78 105.41)
+			(xy 144.78 109.22) (xy 144.78 100.33)
 		)
 		(stroke
 			(width 0)
@@ -3429,6 +3391,16 @@
 	)
 	(wire
 		(pts
+			(xy 125.73 151.13) (xy 128.27 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3141752d-fb2b-460d-aab7-44c641112dc1")
+	)
+	(wire
+		(pts
 			(xy 81.28 40.64) (xy 87.63 40.64)
 		)
 		(stroke
@@ -3436,6 +3408,16 @@
 			(type default)
 		)
 		(uuid "31783fe4-3aad-4d3b-bc9d-a005128ffdac")
+	)
+	(wire
+		(pts
+			(xy 144.78 97.79) (xy 144.78 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "332b3d0a-670a-4c0a-9044-e3828e71bbe2")
 	)
 	(wire
 		(pts
@@ -3506,6 +3488,26 @@
 			(type default)
 		)
 		(uuid "3f54d599-b7f7-4f61-8c10-d0c44ddd574b")
+	)
+	(wire
+		(pts
+			(xy 125.73 153.67) (xy 128.27 153.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3fb363bd-61c1-4eab-be6f-f45b108ad564")
+	)
+	(wire
+		(pts
+			(xy 125.73 148.59) (xy 128.27 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "45ff8f87-5a22-448f-b1ef-9ab895d92673")
 	)
 	(wire
 		(pts
@@ -3586,6 +3588,16 @@
 			(type default)
 		)
 		(uuid "55a83dab-9f97-4dc6-8799-284ed4e957b6")
+	)
+	(wire
+		(pts
+			(xy 121.92 181.61) (xy 121.92 182.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "591d372e-7084-4af4-b9f2-61f313a68af9")
 	)
 	(wire
 		(pts
@@ -3779,7 +3791,7 @@
 	)
 	(wire
 		(pts
-			(xy 119.38 93.98) (xy 119.38 102.87)
+			(xy 119.38 93.98) (xy 119.38 97.79)
 		)
 		(stroke
 			(width 0)
@@ -3806,16 +3818,6 @@
 			(type default)
 		)
 		(uuid "9334828e-cb51-4cd7-a30a-fc6f94a2a963")
-	)
-	(wire
-		(pts
-			(xy 125.73 153.67) (xy 128.27 153.67)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "976dfa38-2b64-4f11-81f3-7c05e4222574")
 	)
 	(wire
 		(pts
@@ -3969,16 +3971,6 @@
 	)
 	(wire
 		(pts
-			(xy 125.73 151.13) (xy 128.27 151.13)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c9969769-edcc-4237-a672-6c0a1e029c5a")
-	)
-	(wire
-		(pts
 			(xy 26.67 40.64) (xy 35.56 40.64)
 		)
 		(stroke
@@ -4026,16 +4018,6 @@
 			(type default)
 		)
 		(uuid "d315dcdd-ea56-44ed-b30e-a576e23b9a1b")
-	)
-	(wire
-		(pts
-			(xy 125.73 148.59) (xy 128.27 148.59)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d3f9e080-2d68-4f7d-ba0d-eb6c80eb9e08")
 	)
 	(wire
 		(pts
@@ -4196,6 +4178,16 @@
 			(type default)
 		)
 		(uuid "f517cd7c-ffce-4e96-bef2-c8f21ae6d3b9")
+	)
+	(wire
+		(pts
+			(xy 121.92 167.64) (xy 121.92 168.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fb7f1009-b1a2-46dc-a220-78fb8511b683")
 	)
 	(global_label "pwm drive 3"
 		(shape input)
@@ -4573,7 +4565,7 @@
 	)
 	(global_label "led 4"
 		(shape input)
-		(at 125.73 153.67 180)
+		(at 125.73 151.13 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4583,7 +4575,7 @@
 		)
 		(uuid "9088911d-c7c4-4869-a31b-5ba00e76fc89")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 117.6649 153.67 0)
+			(at 117.6649 151.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4705,7 +4697,7 @@
 	)
 	(global_label "led 3"
 		(shape input)
-		(at 125.73 151.13 180)
+		(at 125.73 153.67 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4715,7 +4707,7 @@
 		)
 		(uuid "e006d356-d851-4207-aefa-f16476c6556a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 117.6649 151.13 0)
+			(at 117.6649 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5321,7 +5313,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Simulation_SPICE:NMOS")
+		(lib_id "Transistor_FET:Q_NMOS_GSD")
 		(at 78.74 90.17 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -5348,7 +5340,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-3"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 			(at 83.82 87.63 0)
 			(effects
 				(font
@@ -5366,35 +5358,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "N-MOSFET transistor, drain/source/gate"
+		(property "Description" "N-MOSFET transistor, gate/source/drain"
 			(at 78.74 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "NMOS"
-			(at 78.74 107.315 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Type" "VDMOS"
-			(at 78.74 109.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=D 2=G 3=S"
-			(at 78.74 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5439,7 +5404,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Simulation_SPICE:NMOS")
+		(lib_id "Transistor_FET:Q_NMOS_GSD")
 		(at 40.64 168.91 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -5466,7 +5431,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-3"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 			(at 45.72 166.37 0)
 			(effects
 				(font
@@ -5484,35 +5449,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "N-MOSFET transistor, drain/source/gate"
+		(property "Description" "N-MOSFET transistor, gate/source/drain"
 			(at 40.64 168.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "NMOS"
-			(at 40.64 186.055 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Type" "VDMOS"
-			(at 40.64 187.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=D 2=G 3=S"
-			(at 40.64 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5901,16 +5839,16 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole_Pad")
-		(at 121.92 172.72 0)
+		(at 121.92 179.07 0)
 		(unit 1)
-		(exclude_from_sim yes)
+		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "37599d6a-495c-4baf-86e4-adb656995abe")
 		(property "Reference" "H2"
-			(at 124.46 170.1799 0)
+			(at 124.46 176.5299 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5919,7 +5857,7 @@
 			)
 		)
 		(property "Value" "MountingHole_Pad"
-			(at 124.46 172.7199 0)
+			(at 124.46 179.0699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5928,7 +5866,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad_TopBottom"
-			(at 121.92 172.72 0)
+			(at 121.92 179.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5937,7 +5875,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 121.92 172.72 0)
+			(at 121.92 179.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5946,7 +5884,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole with connection"
-			(at 121.92 172.72 0)
+			(at 121.92 179.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6036,7 +5974,7 @@
 		(lib_id "Mechanical:MountingHole_Pad")
 		(at 121.92 165.1 0)
 		(unit 1)
-		(exclude_from_sim yes)
+		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
@@ -6060,7 +5998,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad_TopBottom"
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_ISO14580_Pad"
 			(at 121.92 165.1 0)
 			(effects
 				(font
@@ -6661,7 +6599,6 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "5efc5922-9c63-4c08-8e13-452a188374ce")
 		(property "Reference" "J2"
 			(at 135.89 130.8099 0)
@@ -6808,161 +6745,6 @@
 			(project "e32wamb"
 				(path "/982f5c8d-806c-4a7a-88bf-dbecf0057372"
 					(reference "#PWR023")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "wago:2060-452_998-404")
-		(at 119.38 102.87 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "62d227d4-f240-47dd-8c96-ba7157330fb2")
-		(property "Reference" "J1"
-			(at 132.08 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "2060-452_998-404"
-			(at 132.08 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "wago-connector:2060452998404"
-			(at 140.97 197.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.wago.com/2060-452/998-404"
-			(at 140.97 297.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Description" "SMD PCB terminal block; push-button; 0.75 mm; Pin spacing 4 mm; 2-pole; Push-in CAGE CLAMP; in tape-and-reel packaging"
-			(at 119.38 102.87 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Height" "4.5"
-			(at 140.97 497.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer_Name" "Wago"
-			(at 140.97 597.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer_Part_Number" "2060-452/998-404"
-			(at 140.97 697.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Mouser Part Number" ""
-			(at 140.97 797.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Mouser Price/Stock" ""
-			(at 140.97 897.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Arrow Part Number" "2060-452/998-404"
-			(at 140.97 997.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Arrow Price/Stock" "https://www.arrow.com/en/products/2060-452998-404/wago-kontakttechnik-gmbh?utm_currency=USD&region=europe"
-			(at 140.97 1097.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C2765055"
-			(at 119.38 102.87 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "8a003ab5-9626-4877-b2ae-4c26c514c750")
-		)
-		(pin "4"
-			(uuid "9e80236d-256e-4a64-8302-ef5cbdd82ae4")
-		)
-		(pin "2"
-			(uuid "9f45980e-4af2-4794-865c-80adb4db8900")
-		)
-		(pin "3"
-			(uuid "245df925-a4a7-4c93-b4bb-dc4a5a47d3df")
-		)
-		(instances
-			(project ""
-				(path "/982f5c8d-806c-4a7a-88bf-dbecf0057372"
-					(reference "J1")
 					(unit 1)
 				)
 			)
@@ -7161,6 +6943,72 @@
 			(project "e32wamb"
 				(path "/982f5c8d-806c-4a7a-88bf-dbecf0057372"
 					(reference "#PWR019")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 121.92 168.91 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7ee843cb-cd50-4a21-b48f-d71ecf521e27")
+		(property "Reference" "#PWR026"
+			(at 121.92 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 121.92 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 121.92 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 121.92 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 121.92 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "81cf6fd1-87f9-48d3-8e5b-b0a2af84283e")
+		)
+		(instances
+			(project "e32wamb"
+				(path "/982f5c8d-806c-4a7a-88bf-dbecf0057372"
+					(reference "#PWR026")
 					(unit 1)
 				)
 			)
@@ -7826,7 +7674,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Simulation_SPICE:NMOS")
+		(lib_id "Transistor_FET:Q_NMOS_GSD")
 		(at 39.37 88.9 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -7853,7 +7701,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-3"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 			(at 44.45 86.36 0)
 			(effects
 				(font
@@ -7871,35 +7719,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "N-MOSFET transistor, drain/source/gate"
+		(property "Description" "N-MOSFET transistor, gate/source/drain"
 			(at 39.37 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "NMOS"
-			(at 39.37 106.045 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Type" "VDMOS"
-			(at 39.37 107.95 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=D 2=G 3=S"
-			(at 39.37 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8351,15 +8172,15 @@
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x03")
 		(at 133.35 151.13 0)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "c569a111-d21f-4b3b-8c4b-f2836874384b")
 		(property "Reference" "J3"
-			(at 135.89 149.8599 0)
+			(at 135.89 152.4001 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8368,7 +8189,7 @@
 			)
 		)
 		(property "Value" "Conn_01x03"
-			(at 135.89 152.3999 0)
+			(at 135.89 149.8601 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8506,6 +8327,152 @@
 		)
 	)
 	(symbol
+		(lib_id "wago2059:2059-302_998-403")
+		(at 119.38 100.33 0)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "cff3d3fe-c1b4-46cf-83b8-04cbec3eb9e5")
+		(property "Reference" "J1"
+			(at 132.08 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "2059-302_998-403"
+			(at 132.08 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "2059302998403"
+			(at 140.97 5.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.wago.com/2059-302/998-403"
+			(at 140.97 -94.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Description" "SMD PCB terminal block; 0.5 mm; Pin spacing 3 mm; 2-pole; PUSH WIRE; in tape-and-reel packaging"
+			(at 119.38 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Height" ""
+			(at 140.97 -294.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "Wago"
+			(at 140.97 -394.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "2059-302/998-403"
+			(at 140.97 -494.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" ""
+			(at 140.97 -594.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Price/Stock" ""
+			(at 140.97 -694.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Arrow Part Number" "2059-302/998-403"
+			(at 140.97 -794.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Arrow Price/Stock" "https://www.arrow.com/en/products/2059-302998-403/wago-kontakttechnik-gmbh?utm_currency=USD&region=europe"
+			(at 140.97 -894.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "659aee2d-dd73-430d-8258-6a96a685d96b")
+		)
+		(pin "3"
+			(uuid "7af1ebba-d023-48b5-987e-528fdb265f0f")
+		)
+		(pin "1"
+			(uuid "fb8bbaaf-d328-4411-8c94-f113f1650146")
+		)
+		(pin "4"
+			(uuid "f058e872-9799-455d-bba2-62af7eb0713b")
+		)
+		(instances
+			(project ""
+				(path "/982f5c8d-806c-4a7a-88bf-dbecf0057372"
+					(reference "J1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+3.3V")
 		(at 261.62 91.44 0)
 		(unit 1)
@@ -8572,7 +8539,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Simulation_SPICE:NMOS")
+		(lib_id "Transistor_FET:Q_NMOS_GSD")
 		(at 39.37 128.27 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -8599,7 +8566,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-3"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 			(at 44.45 125.73 0)
 			(effects
 				(font
@@ -8617,35 +8584,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "N-MOSFET transistor, drain/source/gate"
+		(property "Description" "N-MOSFET transistor, gate/source/drain"
 			(at 39.37 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "NMOS"
-			(at 39.37 145.415 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Type" "VDMOS"
-			(at 39.37 147.32 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=D 2=G 3=S"
-			(at 39.37 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8764,6 +8704,72 @@
 			(project ""
 				(path "/982f5c8d-806c-4a7a-88bf-dbecf0057372"
 					(reference "C1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 121.92 182.88 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ea978e06-f929-400c-8828-8b8a4229ab01")
+		(property "Reference" "#PWR027"
+			(at 121.92 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 121.92 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 121.92 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 121.92 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 121.92 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "98ad884f-21eb-487b-b418-131fd7606cb5")
+		)
+		(instances
+			(project "e32wamb"
+				(path "/982f5c8d-806c-4a7a-88bf-dbecf0057372"
+					(reference "#PWR027")
 					(unit 1)
 				)
 			)
@@ -9114,7 +9120,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Simulation_SPICE:NMOS")
+		(lib_id "Transistor_FET:Q_NMOS_GSD")
 		(at 78.74 128.27 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -9141,7 +9147,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-3"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 			(at 83.82 125.73 0)
 			(effects
 				(font
@@ -9159,35 +9165,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "N-MOSFET transistor, drain/source/gate"
+		(property "Description" "N-MOSFET transistor, gate/source/drain"
 			(at 78.74 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "NMOS"
-			(at 78.74 145.415 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Type" "VDMOS"
-			(at 78.74 147.32 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=D 2=G 3=S"
-			(at 78.74 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
