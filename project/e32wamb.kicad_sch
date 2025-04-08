@@ -6,8 +6,8 @@
 	(paper "A4")
 	(title_block
 		(title "e32wamb pcb")
-		(date "2025-04-06")
-		(rev "2")
+		(date "2025-04-08")
+		(rev "1")
 		(company "wejn.org")
 		(comment 1 "Licensed under CC BY-SA 4.0")
 		(comment 2 "Open Source Hardware")
@@ -5865,7 +5865,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad_TopBottom"
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_ISO14580_Pad"
 			(at 121.92 179.07 0)
 			(effects
 				(font
