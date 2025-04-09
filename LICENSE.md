@@ -1,11 +1,13 @@
 # License
 
-The things under `datasheets/` are copyrighted by their respective © holders, I make no claim on these.
+The things under `datasheets/`, `jlc-fab-toolkit/` are copyrighted by their
+respective © holders, I make no claim on these.
 
 The kicad project under `project/` subdirectory is covered by the
 [Creative Commons Attribution-ShareAlike 4.0 International](#creative-commons-attribution-sharealike-40-international),
-but some of the subdirectories under `project/` again come from different places (Seeed Studio, Wago, ...),
-and in that case I make no explicit claim over them.
+but some of the subdirectories under `project/` again come from different
+places (Seeed Studio, Wago, ...), and in that case I make no explicit claim
+over them.
 
 ## Creative Commons Attribution-ShareAlike 4.0 International
 
