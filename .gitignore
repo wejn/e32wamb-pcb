@@ -6,3 +6,4 @@ project/fabrication-toolkit-options.json
 project/production
 project/fp-info-cache
 project/*.kicad_prl
+project/e32wamb.step

@@ -6,7 +6,7 @@
 	(paper "A4")
 	(title_block
 		(title "e32wamb pcb")
-		(date "2025-04-09")
+		(date "${CURRENT_DATE}")
 		(rev "2")
 		(company "wejn.org")
 		(comment 1 "Licensed under CC BY-SA 4.0")
