@@ -190,6 +190,7 @@
         0.2,
         0.4,
         0.6,
+        1.0,
         1.4
       ],
       "tuning_pattern_settings": {
@@ -230,6 +231,10 @@
         {
           "diameter": 0.9,
           "drill": 0.3
+        },
+        {
+          "diameter": 1.6,
+          "drill": 0.8
         },
         {
           "diameter": 2.4,
